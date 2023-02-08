@@ -1,4 +1,4 @@
-package java.programmers_test.level_1;
+package hi.programmers_test.level_1;
 
 public class ColaQuiz {
 

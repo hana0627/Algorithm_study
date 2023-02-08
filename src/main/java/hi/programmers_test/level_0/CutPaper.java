@@ -1,4 +1,4 @@
-package java.programmers_test.level_0;
+package hi.programmers_test.level_0;
 
 public class CutPaper {
     class Solution {
