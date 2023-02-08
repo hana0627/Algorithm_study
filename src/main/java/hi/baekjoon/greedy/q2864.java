@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class q2864 {
     //https://www.acmicpc.net/problem/2864
-    public static int min(char[] ch) {
+    private static int min(char[] ch) {
         for(int i = 0 ; i<ch.length; i++) {
             if(ch[i]=='6') {
                 ch[i] = '5';
@@ -15,7 +15,7 @@ public class q2864 {
         return Integer.parseInt(change);
     }
 
-    public static int max (char[] ch) {
+    private static int max (char[] ch) {
         for(int i = 0 ; i<ch.length; i++) {
             if(ch[i]=='5') {
                 ch[i] = '6';
@@ -30,30 +30,33 @@ public class q2864 {
         Scanner sc = new Scanner(System.in);
         char[] A = new char[0];
         char[] B = new char[0];
-        while(sc.hasNextInt()){
-            A = sc.nextLine().toCharArray();
-            B = sc.nextLine().toCharArray();
-            break;
+        String a ="";
+        String b ="";
+        int c = 0;
+        int d = 0;
+        while(sc.hasNext()){
+            c = sc.nextInt();
+            d = sc.nextInt();
+            a = String.valueOf(c);
+            b = String.valueOf(d);
+            A = a.toCharArray();
+            B = b.toCharArray();
+
+
+            int a1 = min(A);
+            int b2 = min(B);
+            int c3 = max(A);
+            int d4 = max(B);
+
+            System.out.println(a1+b2);
+            System.out.println(c3+d4);
         }
-        // 두 숫자가 한라인에서 입력이 주어진다는데
-        // 뭐 ㅡㅡ 왜안되는데ㅡㅡ
-        // 콘솔에 찍으려니까 지금 이러고 잇는거지 쓰지도 않는거ㅡㅡ
-
-        int a = min(A);
-        int b = min(B);
-        int c = max(A);
-        int d = max(B);
-
-        System.out.println(a+b);
-        System.out.println(c+d);
         sc.close();
 
 
 
-
-//        bw.flush();
-//        bw.close();
-//        br.close();
     }
 }
+
+
 

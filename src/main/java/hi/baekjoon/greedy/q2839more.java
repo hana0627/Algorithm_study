@@ -2,9 +2,9 @@ package hi.baekjoon.greedy;
 
 import java.util.Scanner;
 
-public class q2839 {
+public class q2839more {
     //https://www.acmicpc.net/problem/2839
-
+    //못품
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
