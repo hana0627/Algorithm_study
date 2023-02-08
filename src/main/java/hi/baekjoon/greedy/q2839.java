@@ -3,6 +3,7 @@ package hi.baekjoon.greedy;
 import java.util.Scanner;
 
 public class q2839 {
+    //https://www.acmicpc.net/problem/2839
 
     public static void main(String[] args) {
 
