@@ -2,7 +2,7 @@ package hi.baekjoon.greedy;
 
 import java.io.*;
 
-public class q1969more {
+public class q01969more {
 
     public static void main(String[] args) throws IOException {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

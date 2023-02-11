@@ -2,7 +2,7 @@ package hi.baekjoon.greedy;
 
 import java.util.Scanner;
 
-public class q2839more {
+public class q02839more {
     //https://www.acmicpc.net/problem/2839
     //못품
     public static void main(String[] args) {

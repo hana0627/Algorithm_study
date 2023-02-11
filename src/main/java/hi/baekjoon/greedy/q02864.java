@@ -3,7 +3,7 @@ package hi.baekjoon.greedy;
 import java.io.*;
 import java.util.Scanner;
 
-public class q2864 {
+public class q02864 {
     //https://www.acmicpc.net/problem/2864
     private static int min(char[] ch) {
         for(int i = 0 ; i<ch.length; i++) {

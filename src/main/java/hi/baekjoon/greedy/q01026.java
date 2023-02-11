@@ -3,7 +3,7 @@ package hi.baekjoon.greedy;
 import java.io.*;
 import java.util.*;
 //https://www.acmicpc.net/problem/1026
-public class q1026 {
+public class q01026 {
 
     public static void main(String[] args) throws IOException {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
