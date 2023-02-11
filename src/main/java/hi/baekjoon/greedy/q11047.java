@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class reamin {
+public class q11047 {
     //https://www.acmicpc.net/problem/11047
     // TODO 반례못찾겠음
     public static void main(String[] args) throws IOException {
@@ -20,7 +20,7 @@ public class reamin {
         }
 
         int result = solution(Integer.parseInt(s[1]), ints);
-        bw.write(result);
+        bw.write(String.valueOf(result));
 
         bw.flush();
         bw.close();
