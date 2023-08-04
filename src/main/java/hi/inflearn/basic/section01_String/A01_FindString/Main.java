@@ -1,4 +1,4 @@
-package hi.inflearn.basic.section01_String.FindString;
+package hi.inflearn.basic.section01_String.A01_FindString;
 
 import java.util.Scanner;
 
