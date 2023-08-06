@@ -1,8 +1,6 @@
 package hi.inflearn.basic.section01_String.A05_ReverseSomeWord;
 
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -23,16 +21,31 @@ public class Main {
      */
 
     public String solution(String str) {
+        // 해보다 어려워서 강의 따라했음..
 
         String answer;
 
-        char[] chrs = str.toCharArray();
+        char[] chars = str.toCharArray();
+        char tmp;
         int lt = 0;
         int rt = str.length()-1;
         while (lt < rt) {
-
+            if(!Character.isAlphabetic(chars[lt])) {
+                lt++;
+            }
+            else if(!Character.isAlphabetic(chars[rt])) {
+                rt--;
+            }
+            else {
+                tmp = chars[lt];
+                chars[lt] = chars[rt];
+                chars[rt] = tmp;
+                lt++; rt--;
+            }
         }
 
+        answer = String.valueOf(chars);
+        return answer;
 
 
 
