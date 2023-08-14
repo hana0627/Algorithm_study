@@ -6,7 +6,7 @@ import java.util.List;
 
 public class q11047 {
     //https://www.acmicpc.net/problem/11047
-    // TODO 반례못찾겠음
+
     public static void main(String[] args) throws IOException {
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -39,22 +39,22 @@ public class q11047 {
             }
         }
 
-        System.out.println("여기확인");
-        for (Integer integer : list) {
-            System.out.println(integer);
-        }
+//        System.out.println("여기확인");
+//        for (Integer integer : list) {
+//            System.out.println(integer);
+//        }
 
         int result = 0;
 
         tmp = total;
         while(true) {
-            System.out.println("빙글빙글");
+//            System.out.println("빙글빙글");
             for(int i =0; i < list.length; i++) {
                 if(tmp>=list[i]) {
                     tmp -= list[i];
                     result++;
-                    System.out.println("tmp -> " + tmp);
-                    System.out.println("result -> " + result);
+//                    System.out.println("tmp -> " + tmp);
+//                    System.out.println("result -> " + result);
                     break;
                 }
                 if(tmp == 0) {
