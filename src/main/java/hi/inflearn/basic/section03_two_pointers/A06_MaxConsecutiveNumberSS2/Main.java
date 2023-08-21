@@ -42,7 +42,7 @@ public class Main {
 
     public int solution (int n, int m, int[] arr) {
         //TODO 다시한번 풀어보기
-
+        return 1;
     }
 
 
