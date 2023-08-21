@@ -42,6 +42,25 @@ public class Main {
         //TODO 혼자다시풀어보기
 
         int answer = 0;
+        int sum = 0;
+        int lt = 0;
+
+        for(int rt = 0 ; rt<n; rt++) {
+            sum += arr[rt];
+
+            if(sum == m) {
+                answer++;
+            }
+
+            while(sum >= m) {
+                sum -= arr[lt++];
+                if(sum == m) {
+                    answer++;
+                }
+            }
+
+
+        }
 
 
         return answer;
@@ -63,7 +82,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        System.out.println(T.solution(n,m,arr));
+        System.out.print(T.solution(n,m,arr));
 
         sc.close();
     }
