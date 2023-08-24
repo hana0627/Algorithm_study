@@ -78,13 +78,14 @@ public class Main {
     1 5 3 5 1 2 1 4
 
     0 0 0 0 0
-    0 0 1 0 0
-    0 2 5 0 0
-    0 2 4 4 2
-    3 5 1 3 1
+    0 0 0 0 0
+    0 0 5 0 0
+    0 2 4
+     2
+    0 5 1 3 1
 
     1 5 3 5 1 2 1 4
-    4 3 1 1
+    4 3 1 1 3 2 0 4
 
     파이프 번호
     4 3 1 1 3 2 0 4
@@ -99,19 +100,32 @@ public class Main {
         int answer = 0;
         Stack<Integer> stack = new Stack<>();
 
+        int tmp = 0;
+
+//        System.out.println("---------------");
         for(int i : moves) {
             // 비어있는 칸이면 아무것도 수행X
             for(int k=0; k<n; k++) {
                 if(board[k][i-1] != 0) {
-                    stack.push(board[k][i-1]);
+                    tmp = board[k][i-1];
                     board[k][i-1] = 0;
+//                    System.out.println(board[k][i-1]);
+                    if(!stack.empty()) {
+                        if(stack.peek() == tmp) {
+                            stack.pop();
+                            answer +=2;
+                        }else {
+                            stack.push(tmp);
+                        }
+                    }else {
+                        stack.push(tmp);
+                    }
+//                    System.out.println("i = " + i + " stack = " + stack);
                     break;
                 }
 
             }
-
         }
-        System.out.println(stack);
 
         return answer;
 
