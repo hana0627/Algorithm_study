@@ -60,16 +60,8 @@ public class Main {
 
 
     public int solution (int n, int m, int[] arr) {
-        int answer = 0;
-
-        Queue<Persion> Q = new LinkedList<>();
-
-        for(int i = 0; i<n; i++) {
-            Q.offer(new Persion(i,arr[i]));
-        }
-
-        return answer;
-
+       //TODO  다시풀기
+        return 0;
     }
 
 

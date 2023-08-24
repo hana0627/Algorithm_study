@@ -44,8 +44,6 @@ public class Main {
         Arrays.sort(arr1);
         Arrays.sort(arr2);
 
-
-
         int len = n+m;
         int p1 = 0;
         int p2 = 0;
