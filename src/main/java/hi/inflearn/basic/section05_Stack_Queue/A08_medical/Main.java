@@ -60,8 +60,34 @@ public class Main {
 
 
     public int solution (int n, int m, int[] arr) {
-       //TODO  다시풀기
-        return 0;
+        //TODO 재미있었음. 다시
+        int answer = 0;
+
+
+        Queue<Persion> Q = new LinkedList<Persion>();
+        for(int i=0 ; i<n; i++) {
+            Q.offer(new Persion(i,arr[i]));
+        }
+        Persion tmp = new Persion();
+        while(!Q.isEmpty()) {
+            tmp = Q.poll();
+            for(Persion p : Q) {
+                if(p.priod>tmp.priod) {
+                    Q.offer(tmp);
+                    tmp = null;
+                    break;
+                }
+            }
+            if(tmp != null) {
+                answer++;
+                if(tmp.id == m) {
+                    return answer;
+                }
+            }
+
+        }
+
+        return answer;
     }
 
 
