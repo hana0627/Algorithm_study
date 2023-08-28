@@ -1,6 +1,9 @@
 package hi.inflearn.basic.section06_Sorting.A07_coordinate;
 
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
     /*
@@ -39,59 +42,48 @@ public class Main {
      */
 
 
-    public void solution(int size, int[][] arr) {
-        System.out.println("size = " + size);
-        for(int[] x : arr) {
-            for(int i : x) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
-        }
-
-
-    }
-
-
     public static void main(String[] args) {
 
         Main T = new Main();
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[][] arr = new int[n][2];
-        for (int i = 0; i < n; i++) {
-            for(int k = 0; k< 2 ; k++) {
-                arr[i][k] = sc.nextInt();
-            }
+        List<Point> arr = new ArrayList<>();
+        for(int i = 0; i<n; i++) {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            arr.add(new Point(x,y));
+        }
+        
+        
+        Collections.sort(arr); // compareTo의 메소드를 이용해서 정렬해줌
+
+        for(Point p : arr) {
+            System.out.println(p.x + " "+p.y);
         }
 
-        T.solution(n, arr);
 
         sc.close();
     }
 
 }
 
+class Point implements Comparable<Point>{
+    int x; int y;
+    Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 
-/*
-
-//값은 나오는거 같은데 자꾸 틀렷다고 나옴
-// 코드가 더러움 좀 풀이 살짝 보니까 더 이쁘게 풀이할 수 있음
-    StringBuilder sb = new StringBuilder();
-
-        boolean flag = true;
-        for(int i = 0; i<size-2; i++) {
-            if(arr[i] > arr[i+1]) {
-                if(flag) {
-                    sb.append(i+1 + " "); // 철수
-                    flag = false;
-                }
-                else {
-                    sb.append(i+2);
-                }
-            }
+    @Override
+    public int compareTo(Point o) {
+        //뺄셈의 값이 음수면 오름차순
+        //양수면 내림차순
+        if(this.x == o.x) {
+            return this.y - o.y;
         }
-
-        return sb.toString();
-
- */
+        else {
+            return this.x - o.x;
+        }
+    }
+}
