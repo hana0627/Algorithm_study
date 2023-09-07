@@ -53,9 +53,13 @@ public class Main {
         int n = sc.nextInt();
 
 //        System.out.println(T.solution(n));
+        long start = System.currentTimeMillis();
         for(int x : T.solution(n)) {
             System.out.print(x + " ");
         }
+        long end = System.currentTimeMillis();
+
+        System.out.println("\n소요시간 = " + (end - start));
 
         sc.close();
     }
