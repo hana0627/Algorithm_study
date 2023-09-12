@@ -2,8 +2,8 @@ package hi.inflearn.basic.section07_DFS_BFS.A06_subset;
 
 import java.util.Scanner;
 
-public class Main {
-    /*
+public class Main2 {
+     /*
        자연수 N이 주어지면 1부터 N까지의 원소를 갖는 집합의 부분집합을 모두 출력하는
        프로그램을 작성하세요
 
@@ -24,33 +24,30 @@ public class Main {
      */
 
 
-    static int n;
-    static int[] ch;
-
-
-    public void  DFS(int L) {
-        StringBuilder tmp = new StringBuilder();
+    private void DFS(int L) {
+        StringBuilder sb = new StringBuilder();
         if(L == n+1) {
-            for(int i =1; i<=n; i++) {
-                if(ch[i] ==1 ) {
-                    tmp.append(i).append(" ");
+            for(int i = 0; i<n; i++) {
+                if(ch[i] == 1) {
+                    sb.append(i).append(" ");
                 }
             }
-            if(tmp.length() > 0) {
-                System.out.println(tmp);
+            if(sb.length() > 0) {
+                System.out.println(sb);
             }
         }
         else {
             ch[L] = 1;
-            DFS(L+1); // 사용
-
-
+            DFS(L+1);
             ch[L] = 0;
-            DFS(L+1); // 사용x
+            DFS(L+1);
         }
+
+
     }
 
-
+    private static int n;
+    private static int[] ch;
 
     public static void main(String[] args) {
 
@@ -65,5 +62,4 @@ public class Main {
 
         sc.close();
     }
-
 }

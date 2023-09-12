@@ -11,7 +11,7 @@ class Node {
         lt=rt=null;
     }
 }
-class Main {
+public class Main {
 
     /*
      * 아래와 같은 이진트리를 전위순회와 후위순회를 연습해보세요
